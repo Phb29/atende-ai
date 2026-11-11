@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Banco gerado ao rodar
+backend/dados/
+*.db
+*.sqlite3
+
+# Frontend: dependências e build (o build é copiado para backend/static)
+frontend/node_modules/
+frontend/dist/
+backend/static/
+
+# Segredos: só o modelo .env.example entra no Git
+.env
+.env.*
+!.env.example
+
+# Logs e arquivos de sistema/editor
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

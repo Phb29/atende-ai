@@ -1,0 +1,26 @@
+[project]
+name = "atende-ai"
+version = "0.1.0"
+description = "Agente de help desk de TI com LangGraph e aprovação humana para ações que gravam dados."
+requires-python = ">=3.13"
+# Versões fixas: o mesmo código instala sempre as mesmas dependências.
+dependencies = [
+    "fastapi==0.162.4",
+    "httpx==0.28.1",
+    "langgraph==1.2.20",
+    "pydantic==2.14.3",
+    "sqlalchemy==2.1.8",
+    "uvicorn==0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest==9.2.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
